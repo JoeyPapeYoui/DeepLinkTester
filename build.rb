@@ -3,6 +3,7 @@
 
 require 'optparse'
 require 'ostruct'
+require 'FileUtils'
 
 class BuildOptions
     def self.parse(args)
@@ -12,6 +13,7 @@ class BuildOptions
         options.target = nil
         options.version = nil
         options.args = Array.new
+        options.deeplinks = "DeepLinks.json"
         
         configurationList = ["Debug","Release"]
 
@@ -35,6 +37,17 @@ class BuildOptions
                 else
                     puts "ERROR: \"#{config}\" is an invalid configuration type."
                     puts opts
+                    exit 1
+                end
+            end
+
+            opts.on("-d", "--deeplinks DEEPLINKS", String,
+                    "The json file to pull deep links from.") do |deeplinks|
+                
+                if File.exist?(deeplinks)
+                    options.deeplinks = deeplinks
+                else
+                    puts "ERROR: The given deep links file '#{deeplinks}' does not exist."
                     exit 1
                 end
             end
@@ -177,6 +190,8 @@ end
 
 options = BuildOptions.parse(ARGV)
 command = BuildOptions.create_command(options)
+
+FileUtils.cp(options.deeplinks, "AE/assets/configuration/deeplinks/DeepLinks.json")
 
 puts "#=============================================="
 puts "Build command:"
