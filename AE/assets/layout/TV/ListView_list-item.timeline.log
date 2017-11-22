@@ -351,6 +351,17 @@ tracks {
   }
   trackName: "Opacity"
 }
+tracks {
+  binding: IS_VISIBLE
+  targetid: 516804
+  targetname: "DeepLinkName"
+  keytimes {
+    datatype: AE_INT_DATA
+    timeOffset: 0
+    inttype: AE_INTERP_HOLD
+    ivalue1: 1
+  }
+}
 markers {
   starttime: 0.033333335
   duration: 0.13333334

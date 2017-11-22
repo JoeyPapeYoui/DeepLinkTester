@@ -235,6 +235,56 @@ activecomp {
       value: "5"
     }
   }
+  layer {
+    name: "DeepLinkName"
+    id: 516804
+    sourceid: -1
+    transform {
+      anchorPoint {
+        x: 0
+        y: 0
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 96
+        y: 184
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    textinfo {
+      justification: AE_TEXT_LEFT
+      fontSize: 48
+      fontColor {
+        alpha: 1
+        red: 0
+        green: 0
+        blue: 0
+      }
+      fontName: "OpenSans-Bold"
+      isPointText: true
+      isLabel: true
+      text: "Deep Link Name"
+      multiline: false
+      isAllCaps: false
+    }
+  }
   classname: "ListItemButtonView"
   bgcolor {
     alpha: 1
@@ -330,4 +380,11 @@ sources {
   width: 393
   height: 5
   copy_source: false
+}
+sources {
+  uid: 7
+  srctype: AE_FONT_SRC
+  name: "OpenSans-Bold"
+  copy_source: true
+  file_name: "yi_Open Sans-Bold.ttf"
 }

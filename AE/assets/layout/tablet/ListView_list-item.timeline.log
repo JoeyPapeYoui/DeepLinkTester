@@ -298,6 +298,17 @@ tracks {
     ivalue1: 1
   }
 }
+tracks {
+  binding: IS_VISIBLE
+  targetid: 517064
+  targetname: "DeepLinkName"
+  keytimes {
+    datatype: AE_INT_DATA
+    timeOffset: 0
+    inttype: AE_INTERP_HOLD
+    ivalue1: 1
+  }
+}
 markers {
   starttime: 0.016666668
   duration: 0.13333334
