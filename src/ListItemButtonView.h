@@ -43,7 +43,7 @@ public:
     void SetDeepLinkInformation(const CYIString &name, const CYIString &url);
 
 protected:
-    virtual void OnPress() override;
+    virtual void OnRelease() override;
     
 private:
     CYITextSceneNode *m_pDeepLinkText;

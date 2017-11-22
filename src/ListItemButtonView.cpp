@@ -52,8 +52,8 @@ void ListItemButtonView::Reset()
     CYIPushButtonView::Reset();
 }
 
-void ListItemButtonView::OnPress()
+void ListItemButtonView::OnRelease()
 {
-    CYIPushButtonView::OnPress();
+    CYIPushButtonView::OnRelease();
     CallDeepLink(m_deepLinkURL);
 }
