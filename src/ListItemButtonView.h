@@ -41,6 +41,9 @@ public:
         \details Sets the name and URL of the deep link
      */
     void SetDeepLinkInformation(const CYIString &name, const CYIString &url);
+
+protected:
+    virtual void OnPress() override;
     
 private:
     CYITextSceneNode *m_pDeepLinkText;

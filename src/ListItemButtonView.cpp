@@ -1,6 +1,8 @@
 // © You i Labs Inc. 2000-2017. All rights reserved.
 #include "ListItemButtonView.h"
 
+#include "DeepLinkCaller-C-Interface.h"
+
 #include <scenetree/YiTextSceneNode.h>
 
 YI_TYPE_DEF_INST(ListItemButtonView, CYIPushButtonView)
@@ -48,4 +50,10 @@ void ListItemButtonView::Reset()
     m_deepLinkURL = "";
     m_pDeepLinkText->SetText("");
     CYIPushButtonView::Reset();
+}
+
+void ListItemButtonView::OnPress()
+{
+    CYIPushButtonView::OnPress();
+    CallDeepLink(m_deepLinkURL);
 }
