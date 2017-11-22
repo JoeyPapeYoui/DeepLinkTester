@@ -57,7 +57,6 @@ void ListViewApp::ListAdapter::PopulateView(YI_UINT32 uIndex, CYISceneView *pVie
 
 ListViewApp::ListViewApp()
 : m_pListView(YI_NULL)
-, m_pTextEditView(YI_NULL)
 {
 }
 
@@ -113,7 +112,6 @@ bool ListViewApp::UserInit()
     // Retrieve all mandatory and optional components, and ensure all mandatory components are present
     bool bOK = true;
     bOK = bOK && pSceneViewMain->FindNode<CYIListView>(m_pListView, "list", CYISceneView::FETCH_MANDATORY, LOG_TAG);
-    bOK = bOK && pSceneViewMain->FindNode<CYITextEditView>(m_pTextEditView, "text-edit", CYISceneView::FETCH_MANDATORY, LOG_TAG);
     bOK = bOK && pSceneViewMain->FindNode<CYITextSceneNode>(m_pErrorTextNode, "ErrorPlaceholder", CYISceneView::FETCH_MANDATORY, LOG_TAG);
     
     if (!bOK)
@@ -122,8 +120,8 @@ bool ListViewApp::UserInit()
         return false;
     }
 
-    // Give the CYITextEditView initial focus.
-    m_pTextEditView->RequestFocus();
+    // Give the list view initial focus.
+    m_pListView->RequestFocusOnItem(0);
     
     m_pErrorTextNode->Hide();
 

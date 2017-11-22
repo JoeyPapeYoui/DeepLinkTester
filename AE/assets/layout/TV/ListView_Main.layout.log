@@ -121,48 +121,6 @@ activecomp {
       value: "off"
     }
   }
-  layer {
-    name: "text-edit"
-    id: 4
-    sourceid: 3621
-    transform {
-      anchorPoint {
-        x: 419.5
-        y: 35
-        z: 0
-      }
-      scale {
-        x: 1
-        y: 1
-        z: 1
-      }
-      position {
-        x: 960
-        y: 200
-        z: 0
-      }
-      orientation {
-        x: 0
-        y: 0
-        z: 0
-      }
-      rotationX: 0
-      rotationY: 0
-      rotationZ: 0
-      opacity: 1
-    }
-    acceptsshadows: true
-    acceptslights: true
-    castsshadows: false
-    properties {
-      key: "item-gravity"
-      value: "top"
-    }
-    properties {
-      key: "margin-top"
-      value: "139"
-    }
-  }
   bgcolor {
     alpha: 1
     red: 0
@@ -183,7 +141,6 @@ activecomp {
   }
   childtemplates: "ListView_list"
   childtemplates: "ListView_gradient"
-  childtemplates: "ListView_text-edit"
 }
 sources {
   uid: 13
@@ -212,13 +169,5 @@ sources {
   name: "ListView_gradient.layout"
   width: 1920
   height: 330
-  copy_source: true
-}
-sources {
-  uid: 3621
-  srctype: AE_COMP_SRC
-  name: "ListView_text-edit.layout"
-  width: 839
-  height: 70
   copy_source: true
 }

@@ -74,7 +74,7 @@ activecomp {
     acceptsshadows: true
     acceptslights: true
     castsshadows: false
-    parentid: 517586
+    parentid: 517585
   }
   layer {
     name: "gradient"
@@ -109,7 +109,7 @@ activecomp {
     acceptsshadows: true
     acceptslights: true
     castsshadows: false
-    parentid: 517586
+    parentid: 517585
     properties {
       key: "layoutable"
       value: "false"
@@ -120,51 +120,8 @@ activecomp {
     }
   }
   layer {
-    name: "text-edit"
-    id: 517585
-    sourceid: 517024
-    transform {
-      anchorPoint {
-        x: 656
-        y: 35
-        z: 0
-      }
-      scale {
-        x: 1
-        y: 1
-        z: 1
-      }
-      position {
-        x: 50
-        y: -649
-        z: 0
-      }
-      orientation {
-        x: 0
-        y: 0
-        z: 0
-      }
-      rotationX: 0
-      rotationY: 0
-      rotationZ: 0
-      opacity: 1
-    }
-    acceptsshadows: true
-    acceptslights: true
-    castsshadows: false
-    parentid: 517586
-    properties {
-      key: "margin-top"
-      value: "187"
-    }
-    properties {
-      key: "margin-bottom"
-      value: "144"
-    }
-  }
-  layer {
     name: "NoScaleCenterAnchor"
-    id: 517586
+    id: 517585
     sourceid: 517143
     transform {
       anchorPoint {
@@ -220,7 +177,6 @@ activecomp {
   }
   childtemplates: "ListView_list"
   childtemplates: "ListView_gradient"
-  childtemplates: "ListView_text-edit"
 }
 sources {
   uid: 517020
@@ -249,14 +205,6 @@ sources {
   name: "ListView_gradient.layout"
   width: 2048
   height: 410
-  copy_source: true
-}
-sources {
-  uid: 517024
-  srctype: AE_COMP_SRC
-  name: "ListView_text-edit.layout"
-  width: 1312
-  height: 70
   copy_source: true
 }
 sources {

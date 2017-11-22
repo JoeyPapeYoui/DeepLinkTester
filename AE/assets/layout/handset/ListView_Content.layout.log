@@ -120,51 +120,9 @@ activecomp {
       key: "interactive"
       value: "off"
     }
-  }
-  layer {
-    name: "text-edit"
-    id: 517250
-    sourceid: 258427
-    transform {
-      anchorPoint {
-        x: 315
-        y: 35
-        z: 0
-      }
-      scale {
-        x: 1
-        y: 1
-        z: 1
-      }
-      position {
-        x: 375
-        y: 34.5
-        z: 0
-      }
-      orientation {
-        x: 0
-        y: 0
-        z: 0
-      }
-      rotationX: 0
-      rotationY: 0
-      rotationZ: 0
-      opacity: 1
-    }
-    acceptsshadows: true
-    acceptslights: true
-    castsshadows: false
     properties {
-      key: "item-gravity"
-      value: "top"
-    }
-    properties {
-      key: "margin-top"
-      value: "90"
-    }
-    properties {
-      key: "margin-bottom"
-      value: "20"
+      key: "placeholder"
+      value: "true"
     }
   }
   bgcolor {
@@ -189,9 +147,12 @@ activecomp {
     key: "scale-mode"
     value: "fit"
   }
+  properties {
+    key: "insert-after-layer-id"
+    value: "517248"
+  }
   childtemplates: "ListView_list"
   childtemplates: "ListView_gradient"
-  childtemplates: "ListView_text-edit"
 }
 sources {
   uid: 258398
@@ -220,13 +181,5 @@ sources {
   name: "ListView_gradient.layout"
   width: 3840
   height: 250
-  copy_source: true
-}
-sources {
-  uid: 258427
-  srctype: AE_COMP_SRC
-  name: "ListView_text-edit.layout"
-  width: 630
-  height: 70
   copy_source: true
 }

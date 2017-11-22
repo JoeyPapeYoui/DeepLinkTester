@@ -93,7 +93,6 @@ private:
     void PopulateListView();
 
     CYIListView       *m_pListView;
-    CYITextEditView   *m_pTextEditView;
     CYITextSceneNode  *m_pErrorTextNode;
 
     DataModel m_DataModel;
