@@ -1,0 +1,61 @@
+activecomp {
+  name: "ListView_search-icon"
+  width: 40
+  height: 40
+  defaultcameradistance: 55.555557
+  layer {
+    name: "search-icon.png"
+    id: 517174
+    sourceid: 516870
+    transform {
+      anchorPoint {
+        x: 20
+        y: 20
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 20
+        y: 20
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    properties {
+      key: "mipmapping"
+      value: "true"
+    }
+  }
+  bgcolor {
+    alpha: 1
+    red: 0
+    green: 0
+    blue: 0
+  }
+}
+sources {
+  uid: 516870
+  srctype: AE_IMAGE_SRC
+  name: "search-icon.png"
+  width: 40
+  height: 40
+  numberOfFrames: 1
+  fps: 0
+  loops: 1
+  copy_source: true
+}

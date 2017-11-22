@@ -1,0 +1,324 @@
+tracks {
+  binding: IS_VISIBLE
+  targetid: 517636
+  targetname: "list-item-shadow-tablet.png"
+  keytimes {
+    datatype: AE_INT_DATA
+    timeOffset: 0
+    inttype: AE_INTERP_HOLD
+    ivalue1: 1
+  }
+}
+tracks {
+  binding: OPACITY
+  targetid: 517636
+  targetname: "list-item-shadow-tablet.png"
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.016666668
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 1
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.033326667
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.95719129
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.049986668
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.84429896
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.066646665
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.68462336
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.083306663
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.50146484
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.09996666
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.31812397
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.11662666
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.15790117
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.13328665
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.044096831
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.14994666
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 1.1429191e-05
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.15
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0
+  }
+  trackName: "Opacity"
+}
+tracks {
+  binding: IS_VISIBLE
+  targetid: 517637
+  targetname: "list-item-bg"
+  keytimes {
+    datatype: AE_INT_DATA
+    timeOffset: 0
+    inttype: AE_INTERP_HOLD
+    ivalue1: 1
+  }
+}
+tracks {
+  binding: IS_VISIBLE
+  targetid: 517638
+  targetname: "list-item-press-rect"
+  keytimes {
+    datatype: AE_INT_DATA
+    timeOffset: 0
+    inttype: AE_INTERP_HOLD
+    ivalue1: 1
+  }
+}
+tracks {
+  binding: OPACITY
+  targetid: 517638
+  targetname: "list-item-press-rect"
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.016666668
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.033326667
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.047971964
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.049986668
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.16795456
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.066646665
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.32404786
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.083306663
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.4803519
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.09996666
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.60096681
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.11662666
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.64999259
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.11666667
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.65
+  }
+  trackName: "Opacity"
+}
+tracks {
+  binding: IS_VISIBLE
+  targetid: 517639
+  targetname: "list-item-press-circle-handset.png"
+  keytimes {
+    datatype: AE_INT_DATA
+    timeOffset: 0
+    inttype: AE_INTERP_HOLD
+    ivalue1: 1
+  }
+}
+tracks {
+  binding: OPACITY
+  targetid: 517639
+  targetname: "list-item-press-circle-handset.png"
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.06666667
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.083326668
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.098444015
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.099986665
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.33333161
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.11664666
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.61399609
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.13330667
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.84977078
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.14996667
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.94998914
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_DATA
+    timeOffset: 0.15
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.95
+  }
+  trackName: "Opacity"
+}
+tracks {
+  binding: SCALE
+  targetid: 517639
+  targetname: "list-item-press-circle-handset.png"
+  keytimes {
+    datatype: AE_FLOAT_VECTOR_DATA
+    timeOffset: 0.083333336
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.92928594
+    fvalue2: 0.92928594
+    fvalue3: 1
+  }
+  keytimes {
+    datatype: AE_FLOAT_VECTOR_DATA
+    timeOffset: 0.099993333
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.92559153
+    fvalue2: 0.92559153
+    fvalue3: 1
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_VECTOR_DATA
+    timeOffset: 0.11665333
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.92057317
+    fvalue2: 0.92057317
+    fvalue3: 1
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_VECTOR_DATA
+    timeOffset: 0.13331333
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.91631645
+    fvalue2: 0.91631645
+    fvalue3: 1
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_VECTOR_DATA
+    timeOffset: 0.14997333
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.9142859
+    fvalue2: 0.9142859
+    fvalue3: 1
+    isCookedKeytime: true
+  }
+  keytimes {
+    datatype: AE_FLOAT_VECTOR_DATA
+    timeOffset: 0.15
+    inttype: AE_INTERP_LINEAR
+    fvalue1: 0.91428572
+    fvalue2: 0.91428572
+    fvalue3: 1
+  }
+  trackName: "Scale"
+}
+tracks {
+  binding: IS_VISIBLE
+  targetid: 517640
+  targetname: "logo-light.png"
+  keytimes {
+    datatype: AE_INT_DATA
+    timeOffset: 0
+    inttype: AE_INTERP_HOLD
+    ivalue1: 1
+  }
+}
+markers {
+  starttime: 0.016666668
+  duration: 0.13333334
+  name: "Press"
+  tracksSelection {
+    targetid: 517636
+    binding: OPACITY
+  }
+  tracksSelection {
+    targetid: 517638
+    binding: OPACITY
+  }
+  tracksSelection {
+    targetid: 517639
+    binding: OPACITY
+  }
+  tracksSelection {
+    targetid: 517639
+    binding: SCALE
+  }
+  alltracks: false
+  id: 18
+  looping: false
+}

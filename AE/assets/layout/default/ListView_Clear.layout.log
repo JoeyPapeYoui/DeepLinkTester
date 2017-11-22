@@ -1,0 +1,127 @@
+activecomp {
+  name: "ListView_Clear"
+  width: 48
+  height: 48
+  defaultcameradistance: 66.666664
+  layer {
+    name: "search-btn.png"
+    id: 517598
+    sourceid: 516986
+    transform {
+      anchorPoint {
+        x: 24
+        y: 24
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 24
+        y: 24
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+  }
+  layer {
+    name: "search-btn-active.png"
+    id: 517599
+    sourceid: 516988
+    transform {
+      anchorPoint {
+        x: 24
+        y: 24
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 24
+        y: 24
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 0
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+  }
+  classname: "CYIPushButtonView"
+  bgcolor {
+    alpha: 1
+    red: 0
+    green: 0
+    blue: 0
+  }
+  properties {
+    key: "componentSubtype"
+    value: "push"
+  }
+  properties {
+    key: "componentType"
+    value: "button"
+  }
+  properties {
+    key: "default-text"
+    value: "Search..."
+  }
+  properties {
+    key: "clip"
+    value: "false"
+  }
+  properties {
+    key: "layout"
+    value: "CYIStackLayout"
+  }
+  properties {
+    key: "gravity"
+    value: "center"
+  }
+}
+sources {
+  uid: 516986
+  srctype: AE_IMAGE_SRC
+  name: "search-btn.png"
+  width: 48
+  height: 48
+  numberOfFrames: 1
+  fps: 0
+  loops: 1
+  copy_source: true
+}
+sources {
+  uid: 516988
+  srctype: AE_IMAGE_SRC
+  name: "search-btn-active.png"
+  width: 48
+  height: 48
+  numberOfFrames: 1
+  fps: 0
+  loops: 1
+  copy_source: true
+}

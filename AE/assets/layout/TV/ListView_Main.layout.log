@@ -1,0 +1,224 @@
+activecomp {
+  name: "ListView_Main"
+  width: 1920
+  height: 1080
+  defaultcameradistance: 2666.6667
+  layer {
+    name: "main-bg"
+    id: 1
+    sourceid: 13
+    transform {
+      anchorPoint {
+        x: 960
+        y: 540
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 960
+        y: 540
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    properties {
+      key: "background"
+      value: "true"
+    }
+  }
+  layer {
+    name: "list"
+    id: 2
+    sourceid: 31
+    transform {
+      anchorPoint {
+        x: 960
+        y: 410
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 960
+        y: 670
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    properties {
+      key: "item-gravity"
+      value: "bottom"
+    }
+  }
+  layer {
+    name: "gradient"
+    id: 3
+    sourceid: 516973
+    transform {
+      anchorPoint {
+        x: 960
+        y: 165
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 960
+        y: 203
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    properties {
+      key: "layoutable"
+      value: "false"
+    }
+    properties {
+      key: "interactive"
+      value: "off"
+    }
+  }
+  layer {
+    name: "text-edit"
+    id: 4
+    sourceid: 3621
+    transform {
+      anchorPoint {
+        x: 419.5
+        y: 35
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 960
+        y: 200
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    properties {
+      key: "item-gravity"
+      value: "top"
+    }
+    properties {
+      key: "margin-top"
+      value: "139"
+    }
+  }
+  bgcolor {
+    alpha: 1
+    red: 0
+    green: 0
+    blue: 0
+  }
+  properties {
+    key: "layout"
+    value: "CYIAutoLayout"
+  }
+  properties {
+    key: "gravity"
+    value: "none"
+  }
+  properties {
+    key: "spacing"
+    value: "0"
+  }
+  childtemplates: "ListView_list"
+  childtemplates: "ListView_gradient"
+  childtemplates: "ListView_text-edit"
+}
+sources {
+  uid: 13
+  srctype: AE_SOLID_SRC
+  color {
+    alpha: 1
+    red: 0.87843137979507446
+    green: 0.87843137979507446
+    blue: 0.87843137979507446
+  }
+  width: 1920
+  height: 1080
+  copy_source: false
+}
+sources {
+  uid: 31
+  srctype: AE_COMP_SRC
+  name: "ListView_list.layout"
+  width: 1920
+  height: 820
+  copy_source: true
+}
+sources {
+  uid: 516973
+  srctype: AE_COMP_SRC
+  name: "ListView_gradient.layout"
+  width: 1920
+  height: 330
+  copy_source: true
+}
+sources {
+  uid: 3621
+  srctype: AE_COMP_SRC
+  name: "ListView_text-edit.layout"
+  width: 839
+  height: 70
+  copy_source: true
+}

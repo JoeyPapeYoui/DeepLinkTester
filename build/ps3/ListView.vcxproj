@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|PS3">
+      <Configuration>Debug</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|PS3">
+      <Configuration>Release</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\templates\mains\src\PS3MainDefault.cpp" />
+    <ClCompile Include="..\..\src\DataModel.cpp" />
+    <ClCompile Include="..\..\src\ListItemButtonView.cpp" />
+    <ClCompile Include="..\..\src\ListViewApp.cpp" />
+    <ClCompile Include="..\..\src\ListViewAppFactory.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and '$(VisualStudioVersion)' == ''">$(VCTargetsPath11)</VCTargetsPath>
+    <ProjectGuid>{F4EF8CA3-0639-47B2-815B-38A4883A30A4}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>SNC</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>SNC</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(DebuggerFlavor)'=='PS3Debugger'" Label="OverrideDebuggerDefaults">
+    <!--LocalDebuggerCommand>$(TargetPath)</LocalDebuggerCommand-->
+    <!--LocalDebuggerCommandArguments></LocalDebuggerCommandArguments-->
+    <!--LocalDebuggerCommandLine>-r -e -m</LocalDebuggerCommandLine-->
+    <!--LocalRunCommandLine>-r</LocalRunCommandLine-->
+    <!--LocalTunerCommandLine></LocalTunerCommandLine-->
+    <!--LocalDebuggerFileServingDirectory>$(ProjectDir)</LocalDebuggerFileServingDirectory-->
+    <!--LocalDebuggerHomeDirectory>$(ProjectDir)</LocalDebuggerHomeDirectory-->
+    <!--LocalDebuggerProjectFile></LocalDebuggerProjectFile-->
+    <!--LocalDebuggerResetType>Soft</LocalDebuggerResetType-->
+    <!--LocalDebuggerClearTty>False</LocalDebuggerClearTty-->
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+    <LibraryPath>$(SCE_PS3_ROOT)\target\ppu\lib\PSGL\RSX\debug</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+    <LibraryPath>$(SCE_PS3_ROOT)\target\ppu\lib\PSGL\RSX\opt</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+    <ClCompile>
+      <PreprocessorDefinitions>YI_CONSOLE;YI_HAS_VIRTUAL_KEYBOARD;YI_PS3;YI_PSGL_RENDERING;YI_FONT_ATLAS;YI_LOGGING;YI_DEBUG;__CELL_ASSERT__;U_STATIC_IMPLEMENTATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalIncludeDirectories>.;..\..\..\..\templates\mains\src;..\..\..\..\core\dist\include;..\..\..\..\core\dist\include\platform\ps3;..\..\..\..\thirdparty\prebuilt\ps3\include;..\..\..\..\thirdparty\prebuilt\include;..\..\..\..\include\sdk;..\..\..\..\include\sdk\platform\ps3;..\..\..\..\include\thirdparty\ps3;..\..\..\..\include\thirdparty\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CppLanguageStd>Cpp11</CppLanguageStd>
+      <DisableSpecificWarnings>1111,1576</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libyouiengine.a;libpbbindings.a;libaudio_stub.a;libkey2char_stub.a;-ljpeg;-lpng;-lzlib;-lfreetype;-lvdec_stub;-ladec_stub;curl.a;castLabs_cff_parser.a;castLabs_client_libs.a;castLabs_common_libs.a;castLabs_common_libs_timed-text-master.a;libxml2.a;libsavedata.a;libhl_common.a;libsecure.a;libsysutil_savedata_stub.a;-lprotobuf;-lwebp;-lpbbindings;libicudata.a;libicule.a;libiculx.a;libicuuc.a;libicui18n.a;-lpthread;-lnet_stub;-lnetctl_stub;-lhttp_util_stub;-lhttp_stub;-lssl_stub;-lPSGL;-lgcm_cmd;-lgcm_sys_stub;-lsysutil_stub;-lsysmodule_stub;-lsysutil_game_stub;-lsysutil_np_stub;-lsysutil_np2_stub;-lsysutil_userinfo_stub;-lsysutil_oskdialog_ext_stub;-lresc_stub;-ldbg;-lsync_stub;$(SCE_PS3_ROOT)\target\ppu\lib\hash\libmd5.a;$(SCE_PS3_ROOT)\target\ppu\lib\hash\libsha1.a;$(SCE_PS3_ROOT)\target\ppu\lib\hash\libsha224.a;$(SCE_PS3_ROOT)\target\ppu\lib\hash\libsha256.a;$(SCE_PS3_ROOT)\target\ppu\lib\hash\libsha384.a;$(SCE_PS3_ROOT)\target\ppu\lib\hash\libsha512.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\..\core\dist\prebuilt\ps3\$(Configuration);..\..\..\..\thirdparty\prebuilt\ps3\$(Configuration);..\..\..\..\libs\ps3\$(Configuration);..\..\..\..\libs\ps3\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+    <ClCompile>
+      <PreprocessorDefinitions>YI_CONSOLE;YI_HAS_VIRTUAL_KEYBOARD;YI_PS3;YI_PSGL_RENDERING;YI_FONT_ATLAS;YI_LOGGING;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <AdditionalIncludeDirectories>.;..\..\..\..\templates\mains\src;..\..\..\..\core\dist\include;..\..\..\..\core\dist\include\platform\ps3;..\..\..\..\thirdparty\prebuilt\ps3\include;..\..\..\..\thirdparty\prebuilt\include;..\..\..\..\include\sdk;..\..\..\..\include\sdk\platform\ps3;..\..\..\..\include\thirdparty\ps3;..\..\..\..\include\thirdparty\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CppLanguageStd>Cpp11</CppLanguageStd>
+      <DisableSpecificWarnings>1111,1576</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libyouiengine.a;libpbbindings.a;libaudio_stub.a;libkey2char_stub.a;-ljpeg;-lpng;-lzlib;-lfreetype;-lvdec_stub;-ladec_stub;curl.a;castLabs_cff_parser.a;castLabs_client_libs.a;castLabs_common_libs.a;castLabs_common_libs_timed-text-master.a;libxml2.a;libsavedata.a;libhl_common.a;libsecure.a;libsysutil_savedata_stub.a;-lprotobuf;-lwebp;-lpbbindings;libicudata.a;libicule.a;libiculx.a;libicuuc.a;libicui18n.a;-lpthread;-lnet_stub;-lnetctl_stub;-lhttp_util_stub;-lhttp_stub;-lssl_stub;-lPSGL;-lgcm_cmd;-lgcm_sys_stub;-lsysutil_stub;-lsysmodule_stub;-lsysutil_game_stub;-lsysutil_np_stub;-lsysutil_np2_stub;-lsysutil_userinfo_stub;-lsysutil_oskdialog_ext_stub;-lresc_stub;-ldbg;-lsync_stub;$(SCE_PS3_ROOT)\target\ppu\lib\hash\libmd5.a;$(SCE_PS3_ROOT)\target\ppu\lib\hash\libsha1.a;$(SCE_PS3_ROOT)\target\ppu\lib\hash\libsha224.a;$(SCE_PS3_ROOT)\target\ppu\lib\hash\libsha256.a;$(SCE_PS3_ROOT)\target\ppu\lib\hash\libsha384.a;$(SCE_PS3_ROOT)\target\ppu\lib\hash\libsha512.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\..\core\dist\prebuilt\ps3\$(Configuration);..\..\..\..\thirdparty\prebuilt\ps3\$(Configuration);..\..\..\..\libs\ps3\$(Configuration);..\..\..\..\libs\ps3\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <InfoStripping>StripSymsAndDebug</InfoStripping>
+      <WriteFselfDigest>true</WriteFselfDigest>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Condition="'$(ConfigurationType)' == 'Makefile' and Exists('$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets')" Project="$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

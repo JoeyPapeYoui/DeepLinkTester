@@ -1,0 +1,69 @@
+activecomp {
+  name: "ListView_gradient"
+  width: 2048
+  height: 410
+  defaultcameradistance: 2844.4443
+  layer {
+    name: "gradient.png"
+    id: 517611
+    sourceid: 516959
+    transform {
+      anchorPoint {
+        x: 0.5
+        y: 102.5
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 1024
+        y: 205
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    properties {
+      key: "background"
+      value: "true"
+    }
+  }
+  bgcolor {
+    alpha: 1
+    red: 0
+    green: 0
+    blue: 0
+  }
+  properties {
+    key: "layout"
+    value: "CYIStackLayout"
+  }
+  properties {
+    key: "gravity"
+    value: "center"
+  }
+}
+sources {
+  uid: 516959
+  srctype: AE_IMAGE_SRC
+  name: "gradient.png"
+  width: 1
+  height: 205
+  numberOfFrames: 1
+  fps: 0
+  loops: 1
+  copy_source: true
+}

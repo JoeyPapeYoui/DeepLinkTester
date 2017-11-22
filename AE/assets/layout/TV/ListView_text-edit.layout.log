@@ -1,0 +1,322 @@
+activecomp {
+  name: "ListView_text-edit"
+  width: 839
+  height: 70
+  defaultcameradistance: 1165.2778
+  layer {
+    name: "InputProperties"
+    id: 3621
+    sourceid: 3773
+    transform {
+      anchorPoint {
+        x: 25
+        y: 30
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 755.78778
+        y: 0.65679932
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    parentid: 3622
+  }
+  layer {
+    name: "Text"
+    id: 3622
+    sourceid: -1
+    transform {
+      anchorPoint {
+        x: 0
+        y: 5
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 58.2122
+        y: 33.3432
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    textinfo {
+      justification: AE_TEXT_LEFT
+      fontSize: 26
+      fontColor {
+        alpha: 1
+        red: 0.16470998525619507
+        green: 0.16470998525619507
+        blue: 0.16470998525619507
+      }
+      fontName: "Gotham-Medium"
+      isPointText: true
+      isLabel: true
+      text: "Default Text"
+      multiline: false
+      isAllCaps: false
+    }
+  }
+  layer {
+    name: "text-edit-underline"
+    id: 3623
+    sourceid: 258357
+    transform {
+      anchorPoint {
+        x: 419.5
+        y: 1.5
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 419
+        y: 58.5
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+  }
+  layer {
+    name: "search-icon.png"
+    id: 3624
+    sourceid: 516870
+    transform {
+      anchorPoint {
+        x: 20
+        y: 20
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 20
+        y: 19.864563
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    properties {
+      key: "mipmapping"
+      value: "true"
+    }
+  }
+  layer {
+    name: "search-icon-active.png"
+    id: 3625
+    sourceid: 516953
+    transform {
+      anchorPoint {
+        x: 20
+        y: 20
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 20
+        y: 20
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 0
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    properties {
+      key: "mipmapping"
+      value: "true"
+    }
+  }
+  layer {
+    name: "Clear"
+    id: 3626
+    sourceid: 517302
+    transform {
+      anchorPoint {
+        x: 24
+        y: 24
+        z: 0
+      }
+      scale {
+        x: 0.83333337
+        y: 0.83333337
+        z: 1
+      }
+      position {
+        x: 819
+        y: 20
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+  }
+  classname: "CYITextEditView"
+  bgcolor {
+    alpha: 1
+    red: 0
+    green: 0
+    blue: 0
+  }
+  properties {
+    key: "componentType"
+    value: "input"
+  }
+  properties {
+    key: "componentSubtype"
+    value: "regular"
+  }
+  properties {
+    key: "default-text"
+    value: "Search..."
+  }
+  properties {
+    key: "clip"
+    value: "false"
+  }
+  childtemplates: "ListView_Clear"
+}
+sources {
+  uid: 3773
+  srctype: AE_SOLID_SRC
+  color {
+    alpha: 1
+    red: 0.16470588743686676
+    green: 0.16470588743686676
+    blue: 0.16470588743686676
+  }
+  width: 50
+  height: 60
+  copy_source: false
+}
+sources {
+  uid: 2
+  srctype: AE_FONT_SRC
+  name: "Gotham-Medium"
+  copy_source: true
+  file_name: "yi_Gotham-Medium.otf"
+}
+sources {
+  uid: 258357
+  srctype: AE_SOLID_SRC
+  color {
+    alpha: 1
+    red: 0.64705884456634521
+    green: 0.64705884456634521
+    blue: 0.64705884456634521
+  }
+  width: 839
+  height: 3
+  copy_source: false
+}
+sources {
+  uid: 516870
+  srctype: AE_IMAGE_SRC
+  name: "search-icon.png"
+  width: 40
+  height: 40
+  numberOfFrames: 1
+  fps: 0
+  loops: 1
+  copy_source: true
+}
+sources {
+  uid: 516953
+  srctype: AE_IMAGE_SRC
+  name: "search-icon-active.png"
+  width: 40
+  height: 40
+  numberOfFrames: 1
+  fps: 0
+  loops: 1
+  copy_source: true
+}
+sources {
+  uid: 517302
+  srctype: AE_COMP_SRC
+  name: "ListView_Clear.layout"
+  width: 48
+  height: 48
+  copy_source: true
+}

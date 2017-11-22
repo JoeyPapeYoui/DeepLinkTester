@@ -1,0 +1,76 @@
+activecomp {
+  name: "ListView_list-item-bg"
+  width: 630
+  height: 948
+  defaultcameradistance: 875
+  layer {
+    name: "ImageNode"
+    id: 516913
+    sourceid: 516856
+    transform {
+      anchorPoint {
+        x: 315
+        y: 474
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 315
+        y: 474
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    properties {
+      key: "background"
+      value: "true"
+    }
+  }
+  classname: "CYIImageView"
+  bgcolor {
+    alpha: 1
+    red: 0
+    green: 0
+    blue: 0
+  }
+  properties {
+    key: "layout"
+    value: "CYIStackLayout"
+  }
+  properties {
+    key: "gravity"
+    value: "center"
+  }
+  properties {
+    key: "componentType"
+    value: "image"
+  }
+}
+sources {
+  uid: 516856
+  srctype: AE_SOLID_SRC
+  color {
+    alpha: 1
+    red: 0.94509804248809814
+    green: 0.94509804248809814
+    blue: 0.94509804248809814
+  }
+  width: 630
+  height: 948
+  copy_source: false
+}

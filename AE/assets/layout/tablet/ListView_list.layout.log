@@ -1,0 +1,187 @@
+activecomp {
+  name: "ListView_list"
+  width: 2048
+  height: 1416
+  defaultcameradistance: 2844.4443
+  layer {
+    name: "list-item"
+    id: 517045
+    sourceid: 517059
+    transform {
+      anchorPoint {
+        x: 288
+        y: 432
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 367.5
+        y: 570.5
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    properties {
+      key: "placeholder"
+      value: "true"
+    }
+  }
+  layer {
+    name: "ErrorPlaceholder"
+    id: 517046
+    sourceid: -1
+    transform {
+      anchorPoint {
+        x: 306
+        y: 108
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 1202.8245
+        y: 342.98792
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    textinfo {
+      justification: AE_TEXT_LEFT
+      fontSize: 30
+      fontColor {
+        alpha: 1
+        red: 0.16470998525619507
+        green: 0.16470998525619507
+        blue: 0.16470998525619507
+      }
+      fontName: "Gotham-Book"
+      isPointText: false
+      boundsWidth: 612
+      boundsHeight: 216
+      isLabel: true
+      text: ""
+      multiline: true
+      isAllCaps: false
+    }
+    properties {
+      key: "layoutable"
+      value: "false"
+    }
+    properties {
+      key: "text-placeholder"
+      value: "true"
+    }
+  }
+  classname: "CYIListView"
+  bgcolor {
+    alpha: 1
+    red: 0
+    green: 0
+    blue: 0
+  }
+  properties {
+    key: "componentSubtype"
+    value: "streaming"
+  }
+  properties {
+    key: "componentType"
+    value: "list"
+  }
+  properties {
+    key: "layout"
+    value: "CYIGridLayout"
+  }
+  properties {
+    key: "horizontal-scroll"
+    value: "false"
+  }
+  properties {
+    key: "vertical-scroll"
+    value: "true"
+  }
+  properties {
+    key: "vertical-overpull"
+    value: "60"
+  }
+  properties {
+    key: "overpull-rule"
+    value: "always"
+  }
+  properties {
+    key: "vertical-magnet-offset"
+    value: "-50"
+  }
+  properties {
+    key: "columns"
+    value: "3"
+  }
+  properties {
+    key: "gravity"
+    value: "top"
+  }
+  properties {
+    key: "spacing"
+    value: "80"
+  }
+  properties {
+    key: "clip"
+    value: "true"
+  }
+  properties {
+    key: "padding-top"
+    value: "250"
+  }
+  properties {
+    key: "padding-bottom"
+    value: "160"
+  }
+  properties {
+    key: "insert-after-layer-id"
+    value: "-1"
+  }
+  childtemplates: "ListView_list-item"
+}
+sources {
+  uid: 517059
+  srctype: AE_COMP_SRC
+  name: "ListView_list-item.layout"
+  width: 576
+  height: 864
+  copy_source: true
+}
+sources {
+  uid: 2
+  srctype: AE_FONT_SRC
+  name: "Gotham-Book"
+  copy_source: true
+  file_name: "yi_Gotham-Book.otf"
+}

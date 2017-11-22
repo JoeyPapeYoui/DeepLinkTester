@@ -1,0 +1,333 @@
+activecomp {
+  name: "ListView_list-item"
+  width: 393
+  height: 589
+  defaultcameradistance: 545.83331
+  layer {
+    name: "list-item-shadow.png"
+    id: 516798
+    sourceid: 516893
+    transform {
+      anchorPoint {
+        x: 264.5
+        y: 367.5
+        z: 0
+      }
+      scale {
+        x: 0.955
+        y: 0.955
+        z: 1
+      }
+      position {
+        x: 225.5
+        y: 343.5
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    properties {
+      key: "layoutable"
+      value: "false"
+    }
+  }
+  layer {
+    name: "list-item-bg"
+    id: 516799
+    sourceid: 516872
+    transform {
+      anchorPoint {
+        x: 196.5
+        y: 294.5
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 196.5
+        y: 294.5
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    properties {
+      key: "background"
+      value: "true"
+    }
+  }
+  layer {
+    name: "list-item-press-rect"
+    id: 516800
+    sourceid: 516901
+    transform {
+      anchorPoint {
+        x: 196.5
+        y: 294.5
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 196.5
+        y: 294.5
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 0
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+  }
+  layer {
+    name: "list-item-press-circle.png"
+    id: 516801
+    sourceid: 516897
+    transform {
+      anchorPoint {
+        x: 196.5
+        y: 294.5
+        z: 0
+      }
+      scale {
+        x: 1.015
+        y: 1.015
+        z: 1
+      }
+      position {
+        x: 196
+        y: 294
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 0
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+  }
+  layer {
+    name: "logo-light.png"
+    id: 516802
+    sourceid: 516868
+    transform {
+      anchorPoint {
+        x: 142
+        y: 132.5
+        z: 0
+      }
+      scale {
+        x: 0.5
+        y: 0.5
+        z: 1
+      }
+      position {
+        x: 196
+        y: 294
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+  }
+  layer {
+    name: "focus"
+    id: 516803
+    sourceid: 517405
+    transform {
+      anchorPoint {
+        x: 196.5
+        y: 2.5
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 196.5
+        y: 587.5
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 0
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    properties {
+      key: "item-gravity"
+      value: "bottom"
+    }
+    properties {
+      key: "width"
+      value: "fill-parent"
+    }
+    properties {
+      key: "margin-right"
+      value: "5"
+    }
+    properties {
+      key: "margin-left"
+      value: "5"
+    }
+    properties {
+      key: "margin-bottom"
+      value: "5"
+    }
+  }
+  classname: "ListItemButtonView"
+  bgcolor {
+    alpha: 1
+    red: 1
+    green: 1
+    blue: 1
+  }
+  properties {
+    key: "componentSubtype"
+    value: "push"
+  }
+  properties {
+    key: "componentType"
+    value: "button"
+  }
+  properties {
+    key: "clip"
+    value: "false"
+  }
+  properties {
+    key: "layout"
+    value: "CYIStackLayout"
+  }
+  properties {
+    key: "gravity"
+    value: "center"
+  }
+  properties {
+    key: "usesCustomClass"
+    value: "true"
+  }
+  childtemplates: "ListView_list-item-bg"
+  childtemplates: "ListView_list-item-press-rect"
+}
+sources {
+  uid: 516893
+  srctype: AE_IMAGE_SRC
+  name: "list-item-shadow.png"
+  width: 529
+  height: 735
+  numberOfFrames: 1
+  fps: 0
+  loops: 1
+  copy_source: true
+}
+sources {
+  uid: 516872
+  srctype: AE_COMP_SRC
+  name: "ListView_list-item-bg.layout"
+  width: 393
+  height: 589
+  copy_source: true
+}
+sources {
+  uid: 516901
+  srctype: AE_COMP_SRC
+  name: "ListView_list-item-press-rect.layout"
+  width: 393
+  height: 589
+  copy_source: true
+}
+sources {
+  uid: 516897
+  srctype: AE_IMAGE_SRC
+  name: "list-item-press-circle.png"
+  width: 393
+  height: 589
+  numberOfFrames: 1
+  fps: 0
+  loops: 1
+  copy_source: true
+}
+sources {
+  uid: 516868
+  srctype: AE_IMAGE_SRC
+  name: "logo-light.png"
+  width: 284
+  height: 265
+  numberOfFrames: 1
+  fps: 0
+  loops: 1
+  copy_source: true
+}
+sources {
+  uid: 517405
+  srctype: AE_SOLID_SRC
+  color {
+    alpha: 1
+    red: 0.85490196943283081
+    green: 0.10980392247438431
+    blue: 0.36078432202339172
+  }
+  width: 393
+  height: 5
+  copy_source: false
+}

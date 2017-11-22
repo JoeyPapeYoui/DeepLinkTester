@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest >
+  <asset-bundle root-dir="../AE/assets">
+    <layout dir="default" filename="ListView_Main.layout"/>
+    <layout dir="handset" filename="ListView_Main.layout"/>
+    <layout dir="tablet" filename="ListView_Main.layout"/>
+    <layout dir="TV" filename="ListView_Main.layout"/>
+  </asset-bundle>
+</manifest>

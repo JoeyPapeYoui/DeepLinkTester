@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AppFiles">
+      <UniqueIdentifier>{1150e419-2630-4410-a39a-7a3e99dd5590}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\templates\mains\PS3MainDefault.cpp" />
+    <ClCompile Include="..\..\src\ListViewApp.cpp">
+      <Filter>AppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ListViewAppFactory.cpp">
+      <Filter>AppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ListItemButtonView.cpp">
+      <Filter>AppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\DataModel.cpp">
+      <Filter>AppFiles</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

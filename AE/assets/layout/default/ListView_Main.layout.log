@@ -1,0 +1,268 @@
+activecomp {
+  name: "ListView_Main"
+  width: 2048
+  height: 1536
+  defaultcameradistance: 2844.4443
+  layer {
+    name: "main-bg"
+    id: 517582
+    sourceid: 517020
+    transform {
+      anchorPoint {
+        x: 1024
+        y: 768
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 1024
+        y: 768
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    properties {
+      key: "background"
+      value: "true"
+    }
+  }
+  layer {
+    name: "list"
+    id: 517583
+    sourceid: 517045
+    transform {
+      anchorPoint {
+        x: 1024
+        y: 708
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 50
+        y: 111.50001
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    parentid: 517586
+  }
+  layer {
+    name: "gradient"
+    id: 517584
+    sourceid: 517102
+    transform {
+      anchorPoint {
+        x: 1024
+        y: 205
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 50
+        y: -603
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    parentid: 517586
+    properties {
+      key: "layoutable"
+      value: "false"
+    }
+    properties {
+      key: "interactive"
+      value: "off"
+    }
+  }
+  layer {
+    name: "text-edit"
+    id: 517585
+    sourceid: 517024
+    transform {
+      anchorPoint {
+        x: 656
+        y: 35
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 50
+        y: -649
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    parentid: 517586
+    properties {
+      key: "margin-top"
+      value: "187"
+    }
+    properties {
+      key: "margin-bottom"
+      value: "144"
+    }
+  }
+  layer {
+    name: "NoScaleCenterAnchor"
+    id: 517586
+    sourceid: 517143
+    transform {
+      anchorPoint {
+        x: 50
+        y: 50
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 1024
+        y: 858
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    properties {
+      key: "layoutable"
+      value: "false"
+    }
+  }
+  bgcolor {
+    alpha: 1
+    red: 0
+    green: 0
+    blue: 0
+  }
+  properties {
+    key: "layout"
+    value: "CYIColumnLayout"
+  }
+  properties {
+    key: "gravity"
+    value: "top"
+  }
+  properties {
+    key: "spacing"
+    value: "0"
+  }
+  childtemplates: "ListView_list"
+  childtemplates: "ListView_gradient"
+  childtemplates: "ListView_text-edit"
+}
+sources {
+  uid: 517020
+  srctype: AE_SOLID_SRC
+  color {
+    alpha: 1
+    red: 0.87843102216720581
+    green: 0.87843102216720581
+    blue: 0.87843102216720581
+  }
+  width: 2048
+  height: 1536
+  copy_source: false
+}
+sources {
+  uid: 517045
+  srctype: AE_COMP_SRC
+  name: "ListView_list.layout"
+  width: 2048
+  height: 1416
+  copy_source: true
+}
+sources {
+  uid: 517102
+  srctype: AE_COMP_SRC
+  name: "ListView_gradient.layout"
+  width: 2048
+  height: 410
+  copy_source: true
+}
+sources {
+  uid: 517024
+  srctype: AE_COMP_SRC
+  name: "ListView_text-edit.layout"
+  width: 1312
+  height: 70
+  copy_source: true
+}
+sources {
+  uid: 517143
+  srctype: AE_NULL_SRC
+  width: 100
+  height: 100
+  copy_source: false
+}

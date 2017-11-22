@@ -1,0 +1,262 @@
+activecomp {
+  name: "ListView_list-item"
+  width: 576
+  height: 864
+  defaultcameradistance: 800
+  layer {
+    name: "list-item-shadow-tablet.png"
+    id: 517059
+    sourceid: 517084
+    transform {
+      anchorPoint {
+        x: 347.5
+        y: 491.5
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 317.25
+        y: 483.5
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    properties {
+      key: "layoutable"
+      value: "false"
+    }
+  }
+  layer {
+    name: "list-item-bg"
+    id: 517060
+    sourceid: 517072
+    transform {
+      anchorPoint {
+        x: 288
+        y: 432
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 288
+        y: 432
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+  }
+  layer {
+    name: "list-item-press-rect"
+    id: 517061
+    sourceid: 517089
+    transform {
+      anchorPoint {
+        x: 288
+        y: 432
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 288
+        y: 432
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 0
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+  }
+  layer {
+    name: "list-item-press-circle-handset.png"
+    id: 517062
+    sourceid: 516935
+    transform {
+      anchorPoint {
+        x: 315
+        y: 473
+        z: 0
+      }
+      scale {
+        x: 0.92928594
+        y: 0.92928594
+        z: 1
+      }
+      position {
+        x: 288
+        y: 432
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 0
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+  }
+  layer {
+    name: "logo-light.png"
+    id: 517063
+    sourceid: 516868
+    transform {
+      anchorPoint {
+        x: 142
+        y: 132.5
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 288
+        y: 432
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+  }
+  classname: "ListItemButtonView"
+  bgcolor {
+    alpha: 1
+    red: 0
+    green: 0
+    blue: 0
+  }
+  properties {
+    key: "componentSubtype"
+    value: "push"
+  }
+  properties {
+    key: "componentType"
+    value: "button"
+  }
+  properties {
+    key: "layout"
+    value: "CYIStackLayout"
+  }
+  properties {
+    key: "gravity"
+    value: "center"
+  }
+  properties {
+    key: "clip"
+    value: "false"
+  }
+  properties {
+    key: "usesCustomClass"
+    value: "true"
+  }
+  childtemplates: "ListView_list-item-bg"
+  childtemplates: "ListView_list-item-press-rect"
+}
+sources {
+  uid: 517084
+  srctype: AE_IMAGE_SRC
+  name: "list-item-shadow-tablet.png"
+  width: 695
+  height: 983
+  numberOfFrames: 1
+  fps: 0
+  loops: 1
+  copy_source: true
+}
+sources {
+  uid: 517072
+  srctype: AE_COMP_SRC
+  name: "ListView_list-item-bg.layout"
+  width: 576
+  height: 864
+  copy_source: true
+}
+sources {
+  uid: 517089
+  srctype: AE_COMP_SRC
+  name: "ListView_list-item-press-rect.layout"
+  width: 576
+  height: 864
+  copy_source: true
+}
+sources {
+  uid: 516935
+  srctype: AE_IMAGE_SRC
+  name: "list-item-press-circle-handset.png"
+  width: 630
+  height: 946
+  numberOfFrames: 1
+  fps: 0
+  loops: 1
+  copy_source: true
+}
+sources {
+  uid: 516868
+  srctype: AE_IMAGE_SRC
+  name: "logo-light.png"
+  width: 284
+  height: 265
+  numberOfFrames: 1
+  fps: 0
+  loops: 1
+  copy_source: true
+}

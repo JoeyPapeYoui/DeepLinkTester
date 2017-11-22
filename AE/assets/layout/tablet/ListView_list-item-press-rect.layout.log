@@ -1,0 +1,59 @@
+activecomp {
+  name: "ListView_list-item-press-rect"
+  width: 576
+  height: 864
+  defaultcameradistance: 800
+  layer {
+    name: "list-item-press-rect"
+    id: 517089
+    sourceid: 517087
+    transform {
+      anchorPoint {
+        x: 288
+        y: 432
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 288
+        y: 432
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 1
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+  }
+  bgcolor {
+    alpha: 1
+    red: 0
+    green: 0
+    blue: 0
+  }
+}
+sources {
+  uid: 517087
+  srctype: AE_SOLID_SRC
+  color {
+    alpha: 1
+    red: 0.16470600664615631
+    green: 0.16470600664615631
+    blue: 0.16470600664615631
+  }
+  width: 576
+  height: 864
+  copy_source: false
+}
