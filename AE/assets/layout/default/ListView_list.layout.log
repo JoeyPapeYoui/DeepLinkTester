@@ -142,7 +142,7 @@ activecomp {
   }
   properties {
     key: "columns"
-    value: "3"
+    value: "1"
   }
   properties {
     key: "gravity"
@@ -183,5 +183,5 @@ sources {
   srctype: AE_FONT_SRC
   name: "Gotham-Book"
   copy_source: true
-  file_name: "yi_Gotham-Book.otf"
+  file_name: "yi_Gotham-Book.ttf"
 }

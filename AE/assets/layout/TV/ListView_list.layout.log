@@ -183,5 +183,5 @@ sources {
   srctype: AE_FONT_SRC
   name: "Gotham-Book"
   copy_source: true
-  file_name: "yi_Gotham-Book.otf"
+  file_name: "yi_Gotham-Book.ttf"
 }
