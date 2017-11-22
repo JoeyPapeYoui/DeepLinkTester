@@ -33,7 +33,7 @@ void DataModel::AddListItem(CYIString name, CYIString url)
 
 YI_UINT32 DataModel::GetAssetCount() const
 {
-    return m_deepLinks.size();
+    return (YI_UINT32)m_deepLinks.size();
 }
 
 void DataModel::ClearData()
