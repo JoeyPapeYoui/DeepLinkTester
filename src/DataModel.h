@@ -22,8 +22,6 @@ public:
 
     DataModel();
     virtual ~DataModel();
-
-    void AddListItem(CYIString name, CYIString url);
     
     /*!
      \details Returns the number of items.
@@ -33,17 +31,19 @@ public:
     /*!
      \details Returns the name of the Deep Link
      */
-    CYIString GetDeepLinkName(YI_UINT32 uIndex);
+    CYIString GetDeepLinkName(YI_INT32 nIndex);
     
     /*!
      \details Returns the URL for the Deep Link
      */
-    CYIString GetDeepLinkURL(YI_UINT32 uIndex);
+    CYIString GetDeepLinkURL(YI_INT32 nIndex);
 
     /*!
      \details Remove all the rows in this data model.
      */
     void ClearData();
+    
+    void PopulateDataModel();
 
 private:
     /*!
@@ -61,8 +61,8 @@ private:
      \details Parse the given JSON string into this data model class.
      */
     bool ParseFromJSONString(const CYIString &JSONString);
-
-    std::vector<std::pair<CYIString, CYIString>> m_deepLinks;
+    
+    CYIString TrimQuotes(const CYIString &inputString);
     
     YI_DISALLOW_COPY_AND_ASSIGN(DataModel);
 };

@@ -140,6 +140,7 @@ bool ListViewApp::UserInit()
 
 void ListViewApp::PopulateListView()
 {
+    m_DataModel.PopulateDataModel();
     ListAdapter *pAdapter = new ListAdapter(&m_DataModel, m_pListItemViewTemplate, CYISharedPtr<IYIViewRecycler>(new CYIPooledViewRecycler()));
     m_pListView->SetAdapter(pAdapter);
 }

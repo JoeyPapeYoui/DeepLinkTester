@@ -1,0 +1,24 @@
+{
+  "DeepLinks" : [
+    {
+        "name":"You.i",
+        "url":"https://www.youi.tv/"
+    },
+    {
+        "name":"LinkedIn", 
+        "url":"https://www.linkedin.com/"
+    },
+    {
+        "name":"Facebook", 
+        "url":"https://www.facebook.com/"
+    },
+    {
+        "name":"IGN", 
+        "url":"https://www.ign.com/"
+    },
+    {
+        "name":"XKCD", 
+        "url":"https://xkcd.com/"
+    }
+  ]
+}

@@ -4,6 +4,8 @@
 
 #include <asset/YiAssetLoader.h>
 #include <asset/YiAssetManager.h>
+#include <framework/YiApp.h>
+#include <framework/YiAppContext.h>
 #include <framework/YiFramework.h>
 #include <network/YiHTTPRequest.h>
 #include <network/YiHTTPResponse.h>
@@ -15,74 +17,82 @@
 DataModel::DataModel()
 : CYIAbstractDataModel(0, COLUMNS_COUNT)
 {
-    AddListItem("You.i", "https://www.youi.tv/");
-    AddListItem("LinkedIn", "https://www.linkedin.com/");
-    AddListItem("Facebook", "https://www.facebook.com/");
-    AddListItem("IGN", "https://www.ign.com/");
-    AddListItem("XKCD", "https://xkcd.com/");
 }
 
 DataModel::~DataModel()
 {
 }
 
-void DataModel::AddListItem(CYIString name, CYIString url)
-{
-    m_deepLinks.push_back(std::pair<CYIString, CYIString>(name, url));
-}
-
 YI_UINT32 DataModel::GetAssetCount() const
 {
-    return (YI_UINT32)m_deepLinks.size();
+    return GetRowCount();
 }
 
 void DataModel::ClearData()
 {
     YI_UINT32 uRowCount = GetRowCount();
-    m_deepLinks.clear();
     for(YI_UINT32 uRow = 0; uRow < uRowCount; uRow++)
     {
         RemoveRow(0); // We remove the first element uRowCount times because the indices are invalidated as we remove rows from the data model.
     }
 }
 
-CYIString DataModel::GetDeepLinkName(YI_UINT32 uIndex)
+CYIString DataModel::GetDeepLinkName(YI_INT32 uIndex)
 {
-    return m_deepLinks[uIndex].first;
+    return TrimQuotes(GetItemData(GetIndex(uIndex, DEEP_LINK_NAME)).ToString());
 }
 
-CYIString DataModel::GetDeepLinkURL(YI_UINT32 uIndex)
+CYIString DataModel::GetDeepLinkURL(YI_INT32 uIndex)
 {
-    return m_deepLinks[uIndex].second;
+    return TrimQuotes(GetItemData(GetIndex(uIndex, DEEP_LINK_URL)).ToString());
 }
 
-bool DataModel::ParseFromJSONString(const CYIString &JSONString)
+CYIString DataModel::TrimQuotes(const CYIString &inputString)
 {
-    YI_UNUSED(JSONString);
-    return true;
-    /*
+    CYIString strResult = inputString;
+    if (strResult.GetLength() > 0 && strResult.At(0) == '"')
+    {
+        strResult = strResult.SubStr(1);
+    }
+    if (strResult.GetLength() > 0 && strResult.At(strResult.GetLength() - 1) == '"')
+    {
+        strResult = strResult.SubStr(0, strResult.GetLength() - 1);
+    }
+    return strResult;
+}
+
+void DataModel::PopulateDataModel()
+{
+    ParseFromJSONString(CYIAppContext::GetInstance()->GetApp()->GetAssetsPath() + "configuration/deeplinks/DeepLinks.json");
+}
+
+bool DataModel::ParseFromJSONString(const CYIString &JSONPath)
+{
     CYIParsingError parsingError;
 
-    CYIScopedPtr<yi::rapidjson::Document> pDocument(CYIRapidJSONUtility::CreateDocumentFromString(JSONString, parsingError));
+    CYIScopedPtr<yi::rapidjson::Document> pDocument(CYIRapidJSONUtility::CreateDocumentFromFile(JSONPath, parsingError));
 
     if (!parsingError.HasError())
     {
-        yi::rapidjson::Value &results = (*pDocument)["results"];
+        yi::rapidjson::Value &deepLinks = (*pDocument)["DeepLinks"];
 
         ClearData();
 
         // As each asset is parsed from the server, if valid, store the data into a new row in the data model.
-        for (yi::rapidjson::Value::ConstValueIterator itr = results.Begin(); itr != results.End(); itr++)
+        for (yi::rapidjson::Value::ConstValueIterator itr = deepLinks.Begin(); itr != deepLinks.End(); itr++)
         {
-            CYIString posterPathUri;
-            if (CYIRapidJSONUtility::GetStringField(itr, "poster_path", posterPathUri, parsingError))
+            CYIString deepLinkURL;
+            if (CYIRapidJSONUtility::GetStringField(itr, "url", deepLinkURL, parsingError))
             {
-                if (posterPathUri.IsNotEmpty())
+                CYIString deepLinkName;
+                bool bNameSuccessul = CYIRapidJSONUtility::GetStringField(itr, "name", deepLinkName, parsingError);
+                
+                if (deepLinkURL.IsNotEmpty())
                 {
                     YI_INT32 nNewRow = GetRowCount();
                     InsertRow(nNewRow);
-                    SetItemData(GetIndex(nNewRow, 0), posterPathUri);
-                    m_uAssetCount++;
+                    SetItemData(GetIndex(nNewRow, DEEP_LINK_NAME), bNameSuccessul ? deepLinkName : "");
+                    SetItemData(GetIndex(nNewRow, DEEP_LINK_URL), deepLinkURL);
                 }
             }
         }
@@ -90,10 +100,10 @@ bool DataModel::ParseFromJSONString(const CYIString &JSONString)
 
     if(GetAssetCount() > 0)
     {
-        return SUCCESS;
+        return true;
     }
     else
     {
-        return NO_ASSETS;
-    }*/
+        return false;
+    }
 }
