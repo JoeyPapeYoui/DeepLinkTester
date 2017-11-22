@@ -86,16 +86,6 @@ private:
         DataModel *m_pModel;
         CYISharedPtr<CYIAssetViewTemplate> m_pItemViewTemplate;
     };
-    
-    /*!
-     \details Called when user makes changes in CYITextEditView or when search button is pressed. Initiates fetch request for data.
-     */
-    void Search();
-
-    /*!
-     \details Called when fetch returns. Logs status and calls SetUpListView().
-     */
-    void OnFetchEnded(DataModel::FETCH_RESULT eCode);
 
     /*!
      \details Called when fetch returns.

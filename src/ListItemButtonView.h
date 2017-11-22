@@ -38,23 +38,14 @@ public:
     virtual void Reset() override;
 
     /*!
-        \details Sets the url that will be used to populate the internal image view. The image download will start after this method is called.
+        \details Sets the name and URL of the deep link
      */
-    void SetImageURL(const CYIUrl &url);
+    void SetDeepLinkInformation(const CYIString &name, const CYIString &url);
     
 private:
-    /*!
-        \details The image has been downloaded and assignment on the view succeeded. It is at this point that the placeholder should be hidden.
-     */
-    void OnImageAssigned();
+    CYITextSceneNode *m_pDeepLinkText;
     
-    /*!
-        \details The image download or assignment has failed. This view does nothing in this case other than log the error.
-     */
-    void OnImageAssignmentFailed(const CYIString &errorMessage);
-
-    CYIImageView *m_pImageView;
-    CYISceneNode *m_pPlaceholderLogo;
+    CYIString m_deepLinkURL;
 
     YI_TYPE_BASES(ListItemButtonView, CYIPushButtonView);
 };

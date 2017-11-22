@@ -44,12 +44,13 @@ void ListViewApp::ListAdapter::PopulateView(YI_UINT32 uIndex, CYISceneView *pVie
     if (m_pModel->GetAssetCount() > 0)
     {
         // Get the associated data model item
-        CYIString imageUrl = m_pModel->GetPosterUrl(uIndex);
+        CYIString deepLinkURL = m_pModel->GetDeepLinkURL(uIndex);
+        CYIString deepLinkName = m_pModel->GetDeepLinkName(uIndex);
 
         ListItemButtonView *pItemView = YiDynamicCast<ListItemButtonView>(pView);
-        if (pItemView && imageUrl.IsNotEmpty())
+        if (pItemView)
         {
-            pItemView->SetImageURL(CYIUrl(imageUrl));
+            pItemView->SetDeepLinkInformation(deepLinkName, deepLinkURL);
         }
     }
 }
@@ -123,13 +124,8 @@ bool ListViewApp::UserInit()
 
     // Give the CYITextEditView initial focus.
     m_pTextEditView->RequestFocus();
-
-    // Connect to CYITextEditView signals and connect the buttons.
-    m_pTextEditView->TextChanged.Connect(*this, &ListViewApp::Search);
     
     m_pErrorTextNode->Hide();
-
-    m_DataModel.FetchEnded.Connect(*this, &ListViewApp::OnFetchEnded);
 
     // Load the view template for the list items. This template will be used by the list to build the list item's views.
     m_pListItemViewTemplate = CYIViewTemplate::GetViewTemplate("ListView_list-item");
@@ -142,42 +138,6 @@ bool ListViewApp::UserInit()
     return true;
     
 //! [UserInit]
-}
-
-void ListViewApp::Search()
-{
-    m_DataModel.Fetch(m_pTextEditView->GetValue());
-}
-
-void ListViewApp::OnFetchEnded(DataModel::FETCH_RESULT eCode)
-{
-    CYIString status;
-    switch (eCode)
-    {
-        case DataModel::SUCCESS: status = "SUCCESS"; break;
-        case DataModel::NO_ASSETS: status = "NO_ASSETS"; break;
-        case DataModel::PARSING_ERROR: status = "PARSING_ERROR"; break;
-        case DataModel::HTTP_CLIENT_ERROR: status = "HTTP_CLIENT_ERROR"; break;
-    }
-
-    if (eCode == DataModel::HTTP_CLIENT_ERROR)
-    {
-        m_pErrorTextNode->SetText("Connection Error");
-        m_pErrorTextNode->Show();
-        m_DataModel.ClearData();
-    }
-    else if (eCode == DataModel::NO_ASSETS)
-    {
-        m_pErrorTextNode->SetText("No Search Results");
-        m_pErrorTextNode->Show();
-    }
-    else
-    {
-        m_pErrorTextNode->Hide();
-    }
-
-    YI_LOGI(LOG_TAG, "Fetch returned %s", status.GetData());
-    PopulateListView();
 }
 
 void ListViewApp::PopulateListView()
@@ -193,8 +153,8 @@ bool ListViewApp::UserStart()
     // Set the path where the service can find the SSL root certificate required as this sample makes HTTPS requests.
     CYIHTTPService::GetInstance()->SetSSLRootCertificate(GetAssetsPath() + "/cacert.pem");
     CYIHTTPService::GetInstance()->Start();
-    // Fetch from the server and populate the data model. FetchEnded will be emitted regardless on the success or failure of this fetch operation.
-    m_DataModel.Fetch();
+    
+    PopulateListView();
     return true;
 }
 

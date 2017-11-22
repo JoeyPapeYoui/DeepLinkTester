@@ -14,63 +14,53 @@
 // This sample uses a data model with 0 rows and 1 column (poster art URI).
 DataModel::DataModel()
 : CYIAbstractDataModel(0, COLUMNS_COUNT)
-, m_uAssetCount(0)
 {
+    AddListItem("You.i", "https://www.youi.tv/");
+    AddListItem("LinkedIn", "https://www.linkedin.com/");
+    AddListItem("Facebook", "https://www.facebook.com/");
+    AddListItem("IGN", "https://www.ign.com/");
+    AddListItem("XKCD", "https://xkcd.com/");
 }
 
 DataModel::~DataModel()
 {
 }
 
-void DataModel::Fetch(const CYIString &keyword)
+void DataModel::AddListItem(CYIString name, CYIString url)
 {
-    if (m_pActiveRequest)
-    {
-        // Only allow one active request. If there is an active request cancel it before starting another.
-        CYIHTTPService::GetInstance()->CancelRequest(m_pActiveRequest);
-        m_pActiveRequest.Reset();
-    }
-    
-    const CYIUrl requestURL = keyword.IsEmpty() ? CreateDefaultURL() : CreateSearchURL(keyword);
-    m_pActiveRequest = CYISharedPtr<CYIHTTPRequest>(new CYIHTTPRequest(requestURL, CYIHTTPRequest::GET));
-    m_pActiveRequest->NotifyResponse.Connect(*this, &::DataModel::OnRequestComplete);
-    m_pActiveRequest->NotifyError.Connect(*this, &DataModel::OnRequestError);
-
-    CYIHTTPService::GetInstance()->EnqueueRequest(m_pActiveRequest);
+    m_deepLinks.push_back(std::pair<CYIString, CYIString>(name, url));
 }
 
 YI_UINT32 DataModel::GetAssetCount() const
 {
-    return m_uAssetCount;
-}
-
-CYIString DataModel::GetPosterUrl(YI_UINT32 uIndex)
-{
-    // Get the associated item
-    const CYIDataModelIndex rowIndex = GetIndex(uIndex, 0);
-    CYIAny posterImageURI = GetItemData(rowIndex);
-    CYIString stringPosterImageURI = posterImageURI.ToString();
-
-    CYIString imageUrl = Urls::IMAGE_BASE_URL + stringPosterImageURI;
-    if (imageUrl.Contains("\""))
-    {
-        imageUrl.Remove("\"");
-    }
-    return imageUrl;
+    return m_deepLinks.size();
 }
 
 void DataModel::ClearData()
 {
     YI_UINT32 uRowCount = GetRowCount();
-    m_uAssetCount = 0;
+    m_deepLinks.clear();
     for(YI_UINT32 uRow = 0; uRow < uRowCount; uRow++)
     {
         RemoveRow(0); // We remove the first element uRowCount times because the indices are invalidated as we remove rows from the data model.
     }
 }
 
-DataModel::FETCH_RESULT DataModel::ParseFromJSONString(const CYIString &JSONString)
+CYIString DataModel::GetDeepLinkName(YI_UINT32 uIndex)
 {
+    return m_deepLinks[uIndex].first;
+}
+
+CYIString DataModel::GetDeepLinkURL(YI_UINT32 uIndex)
+{
+    return m_deepLinks[uIndex].second;
+}
+
+bool DataModel::ParseFromJSONString(const CYIString &JSONString)
+{
+    YI_UNUSED(JSONString);
+    return true;
+    /*
     CYIParsingError parsingError;
 
     CYIScopedPtr<yi::rapidjson::Document> pDocument(CYIRapidJSONUtility::CreateDocumentFromString(JSONString, parsingError));
@@ -105,38 +95,5 @@ DataModel::FETCH_RESULT DataModel::ParseFromJSONString(const CYIString &JSONStri
     else
     {
         return NO_ASSETS;
-    }
-}
-
-void DataModel::OnRequestComplete(const CYISharedPtr<CYIHTTPRequest> &pRequest, const CYISharedPtr<CYIHTTPResponse> &pResponse)
-{
-    YI_UNUSED(pRequest);
-
-    m_pActiveRequest.Reset();
-    FETCH_RESULT eFetchStatus = ParseFromJSONString(pResponse->GetBody());
-    FetchEnded(eFetchStatus);
-}
-
-void DataModel::OnRequestError(const CYISharedPtr<CYIHTTPRequest> &pRequest, const HTTP_STATUS_CODE eHTTPStatusCode, const CYIString &errorMessage)
-{
-    YI_UNUSED(pRequest);
-    YI_UNUSED(eHTTPStatusCode);
-    YI_UNUSED(errorMessage);
-    
-    m_pActiveRequest.Reset();
-    FetchEnded(HTTP_CLIENT_ERROR);
-}
-
-const CYIUrl DataModel::CreateDefaultURL() const
-{
-    return CYIUrl(Urls::BASE_URL + Urls::MOVIES + Urls::API_AND_URL + Urls::API_KEY);
-}
-
-const CYIUrl DataModel::CreateSearchURL(CYIString keyword) const
-{
-    while (keyword.Contains(" "))
-    {
-        keyword.Replace("+", keyword.IndexOf(" "), 1);
-    }
-    return CYIUrl(Urls::BASE_URL + Urls::SEARCH + Urls::API_URL + Urls::API_KEY + Urls::SEARCH_PARAMETERS + Urls::QUERY + keyword);
+    }*/
 }
