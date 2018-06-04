@@ -65,7 +65,7 @@ private:
         /*!
          \details pModel is a pointer to the data model, which is used by the adapter to populate its associated list. pItemViewTemplate is a view template for items in the list.
          */
-        ListAdapter(DataModel *pModel, const CYISharedPtr<CYIAssetViewTemplate> &pItemViewTemplate, const CYISharedPtr<IYIViewRecycler> &pViewRecycler);
+        ListAdapter(DataModel *pModel, const std::shared_ptr<CYIAssetViewTemplate> &pItemViewTemplate, const std::shared_ptr<IYIViewRecycler> &pViewRecycler);
 
         /*!
          \details Returns the total number of items in the list (which will correspond to the total number of items in the data model). The returned value indicates the amount of list items that will be created.
@@ -75,7 +75,7 @@ private:
         /*!
          \details Returns the view template for index uIndex. In this case, the same view template is applied to all list items.
          */
-        virtual CYISharedPtr<CYIAssetViewTemplate> GetViewTemplate(YI_UINT32 uIndex) const override;
+        virtual std::shared_ptr<CYIAssetViewTemplate> GetViewTemplate(YI_UINT32 uIndex) const override;
 
         /*!
          \details Populates a view. This function is used to set the initial state of a view after it has been created. Views are created automatically by lists when they become visible (either at initialization or as a result of a user scroll)
@@ -84,7 +84,7 @@ private:
 
     private:
         DataModel *m_pModel;
-        CYISharedPtr<CYIAssetViewTemplate> m_pItemViewTemplate;
+        std::shared_ptr<CYIAssetViewTemplate> m_pItemViewTemplate;
     };
 
     /*!
@@ -96,7 +96,7 @@ private:
     CYITextSceneNode  *m_pErrorTextNode;
 
     DataModel m_DataModel;
-    CYISharedPtr<CYIAssetViewTemplate> m_pListItemViewTemplate;
+    std::shared_ptr<CYIAssetViewTemplate> m_pListItemViewTemplate;
 };
 
 /* @} */

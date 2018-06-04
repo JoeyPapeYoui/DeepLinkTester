@@ -21,7 +21,7 @@
 
 static const CYIString LOG_TAG("ListViewApp");
 
-ListViewApp::ListAdapter::ListAdapter(DataModel *pModel, const CYISharedPtr<CYIAssetViewTemplate> &pItemViewTemplate, const CYISharedPtr<IYIViewRecycler> &pViewRecycler)
+ListViewApp::ListAdapter::ListAdapter(DataModel *pModel, const std::shared_ptr<CYIAssetViewTemplate> &pItemViewTemplate, const std::shared_ptr<IYIViewRecycler> &pViewRecycler)
 : CYIViewAdapter(pViewRecycler)
 , m_pModel(pModel)
 , m_pItemViewTemplate(pItemViewTemplate)
@@ -33,7 +33,7 @@ YI_UINT32 ListViewApp::ListAdapter::GetItemsCount() const
     return m_pModel->GetAssetCount();
 }
 
-CYISharedPtr<CYIAssetViewTemplate> ListViewApp::ListAdapter::GetViewTemplate(YI_UINT32 uIndex) const
+std::shared_ptr<CYIAssetViewTemplate> ListViewApp::ListAdapter::GetViewTemplate(YI_UINT32 uIndex) const
 {
     YI_UNUSED(uIndex);
     return m_pItemViewTemplate;
@@ -141,7 +141,7 @@ bool ListViewApp::UserInit()
 void ListViewApp::PopulateListView()
 {
     m_DataModel.PopulateDataModel();
-    ListAdapter *pAdapter = new ListAdapter(&m_DataModel, m_pListItemViewTemplate, CYISharedPtr<IYIViewRecycler>(new CYIPooledViewRecycler()));
+    ListAdapter *pAdapter = new ListAdapter(&m_DataModel, m_pListItemViewTemplate, std::shared_ptr<IYIViewRecycler>(new CYIPooledViewRecycler()));
     m_pListView->SetAdapter(pAdapter);
 }
 

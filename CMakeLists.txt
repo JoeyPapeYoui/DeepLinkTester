@@ -201,8 +201,10 @@ endif()
 # The configuration method is made available for a platform to set up any specific
 # functionality that requires use of the target variables, such as PROJECT_NAME, etc.
 if(COMMAND yi_configure_platform)
-    yi_configure_platform()
+    yi_configure_platform(PROJECT_TARGET ${PROJECT_NAME})
 endif()
+
+set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 14)
 
 # === END OF COMPILER SETUP ===================================================
 
