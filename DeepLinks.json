@@ -1,24 +1,20 @@
 {
   "DeepLinks" : [
     {
-        "name":"You.i",
+        "name":"Test Screen 2",
+        "url":"yirntestapp://screen2/Screen%202%20Data"
+    },
+    {
+        "name":"Test Screen 3",
+        "url":"yirntestapp://screen3/Screen%203%20Data"
+    },
+    {
+        "name":"Demo App",
+        "url":"yirnapp://test"
+    },
+    {
+        "name":"Internet Test",
         "url":"https://www.youi.tv/"
-    },
-    {
-        "name":"LinkedIn", 
-        "url":"https://www.linkedin.com/"
-    },
-    {
-        "name":"Facebook", 
-        "url":"https://www.facebook.com/"
-    },
-    {
-        "name":"IGN", 
-        "url":"https://www.ign.com/"
-    },
-    {
-        "name":"XKCD", 
-        "url":"https://xkcd.com/"
     }
   ]
 }
