@@ -1,8 +1,7 @@
 // © You i Labs Inc. 2000-2017. All rights reserved.
 #include "ListItemButtonView.h"
 
-#include "DeepLinkCaller-C-Interface.h"
-
+#include <deeplinking/YiDeepLinkBridgeLocator.h>
 #include <scenetree/YiTextSceneNode.h>
 
 YI_TYPE_DEF_INST(ListItemButtonView, CYIPushButtonView)
@@ -38,16 +37,32 @@ bool ListItemButtonView::Init()
     return true;
 }
 
-void ListItemButtonView::SetDeepLinkInformation(const CYIString &name, const CYIString &url)
+void ListItemButtonView::SetDeepLinkInformation(const CYIString &name, const CYIUrl &url)
 {
     m_deepLinkURL = url;
-    m_pDeepLinkText->SetText(name.IsEmpty() ? url : name);
+    
+    CYIString text = name.IsEmpty() ? url.ToString() : name;
+    
+    CYIDeepLinkBridge *pDeepLinkBridge = CYIDeepLinkBridgeLocator::GetDeepLinkBridge();
+    if (pDeepLinkBridge)
+    {
+        if (!pDeepLinkBridge->CanOpenUrl(m_deepLinkURL))
+        {
+            text += "\n(Cannot Open URL)";
+        }
+    }
+    else
+    {
+        text += "\n(Open URL Not Supported)";
+    }
+    
+    m_pDeepLinkText->SetText(text);
 }
 
 void ListItemButtonView::Reset()
 {
     // The view is being recycled by the list view. It will be reset to original state here.
-    m_deepLinkURL = "";
+    m_deepLinkURL.Clear();
     m_pDeepLinkText->SetText("");
     CYIPushButtonView::Reset();
 }
@@ -55,5 +70,9 @@ void ListItemButtonView::Reset()
 void ListItemButtonView::OnRelease()
 {
     CYIPushButtonView::OnRelease();
-    CallDeepLink(m_deepLinkURL);
+    CYIDeepLinkBridge *pDeepLinkBridge = CYIDeepLinkBridgeLocator::GetDeepLinkBridge();
+    if (pDeepLinkBridge)
+    {
+        pDeepLinkBridge->OpenUrl(m_deepLinkURL);
+    }
 }

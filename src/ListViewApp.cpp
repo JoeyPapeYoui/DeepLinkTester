@@ -50,7 +50,7 @@ void ListViewApp::ListAdapter::PopulateView(YI_UINT32 uIndex, CYISceneView *pVie
         ListItemButtonView *pItemView = YiDynamicCast<ListItemButtonView>(pView);
         if (pItemView)
         {
-            pItemView->SetDeepLinkInformation(deepLinkName, deepLinkURL);
+            pItemView->SetDeepLinkInformation(deepLinkName, CYIUrl(deepLinkURL));
         }
     }
 }

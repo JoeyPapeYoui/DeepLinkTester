@@ -2,11 +2,11 @@
 #ifndef _LIST_ITEM_BUTTON_VIEW_
 #define _LIST_ITEM_BUTTON_VIEW_
 
+#include <network/YiUrl.h>
 #include <view/YiPushButtonView.h>
 
 class CYIImageView;
 class CYISceneNode;
-class CYIUrl;
 
 /*!
  \addtogroup listview
@@ -40,7 +40,7 @@ public:
     /*!
         \details Sets the name and URL of the deep link
      */
-    void SetDeepLinkInformation(const CYIString &name, const CYIString &url);
+    void SetDeepLinkInformation(const CYIString &name, const CYIUrl &url);
 
 protected:
     virtual void OnRelease() override;
@@ -48,7 +48,7 @@ protected:
 private:
     CYITextSceneNode *m_pDeepLinkText;
     
-    CYIString m_deepLinkURL;
+    CYIUrl m_deepLinkURL;
 
     YI_TYPE_BASES(ListItemButtonView, CYIPushButtonView);
 };
