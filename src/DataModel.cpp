@@ -12,6 +12,7 @@
 #include <smartptr/YiScopedPtr.h>
 #include <utility/YiParsingError.h>
 #include <utility/YiRapidJSONUtility.h>
+#include <utility/YiDir.h>
 
 // This sample uses a data model with 0 rows and 1 column (poster art URI).
 DataModel::DataModel()
@@ -63,7 +64,7 @@ CYIString DataModel::TrimQuotes(const CYIString &inputString)
 
 void DataModel::PopulateDataModel()
 {
-    ParseFromJSONString(CYIAppContext::GetInstance()->GetApp()->GetAssetsPath() + "configuration/deeplinks/DeepLinks.json");
+    ParseFromJSONString(CYIFramework::GetInstance()->GetAssetLoader()->GetAssetLocator().GetBase() + "configuration" + CYIDir::GetSeparator() + "deeplinks" + CYIDir::GetSeparator() + "DeepLinks.json");
 }
 
 bool DataModel::ParseFromJSONString(const CYIString &JSONPath)

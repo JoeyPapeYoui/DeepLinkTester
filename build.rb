@@ -191,7 +191,7 @@ end
 options = BuildOptions.parse(ARGV)
 command = BuildOptions.create_command(options)
 
-FileUtils.cp(options.deeplinks, "AE/assets/configuration/deeplinks/DeepLinks.json")
+FileUtils.cp(options.deeplinks, "AE" + File::SEPARATOR + "assets" + File::SEPARATOR + "configuration" + File::SEPARATOR + "deeplinks" + File::SEPARATOR + "DeepLinks.json")
 
 puts "#=============================================="
 puts "Build command:"
