@@ -9,8 +9,20 @@
         "url":"yirntestapp://screen3/Screen%203%20Data"
     },
     {
+        "name":"Roku Screen 2 Test",
+        "url":"https://10.100.88.160:8060/launch/dev?MediaType=season&contentID=season5678"
+    },
+    {
+        "name":"Roku Screen 3 Test",
+        "url":"https://10.100.88.160:8060/launch/dev?MediaType=episode&contentID=episode1234"
+    },
+    {
         "name":"Demo App",
         "url":"yirnapp://test"
+    },
+    {
+        "name":"Roku Now TV Test",
+        "url":"http://10.100.88.160:8060/launch/129677"
     },
     {
         "name":"Internet Test",
