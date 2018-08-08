@@ -2,7 +2,7 @@
 #include "AppFactory.h"
 #include "ListViewApp.h"
 
-#define APP_NAME "List View"
+#define APP_NAME "Deep Link Tester"
 
 #define APP_DENSITY (72)
 #if defined(YI_PS4) || defined(YI_XBOX_360) || defined(YI_PS3)

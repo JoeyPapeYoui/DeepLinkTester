@@ -7,7 +7,7 @@ option(YI_TREAT_WARNINGS_AS_ERRORS "Warnings will result in failure to compile w
 
 set(YI_PROJECT_NAME "ListView" CACHE STRING "The name of the project. When building for Android, this is passed from Android Studio.")
 set(YI_PACKAGE_NAME "tv.youi.listview" CACHE STRING "The package name used for the project.")
-set(YI_DISPLAY_NAME "List View" CACHE STRING "The name of the application displayed on the device.")
+set(YI_DISPLAY_NAME "Deep Link Tester" CACHE STRING "The name of the application displayed on the device.")
 set(YI_VERSION_NUMBER 1.0.0.0 CACHE STRING "Build version of the application. This is the version that will be displayed to the end user in the store.")
 set(YI_BUILD_NUMBER "ENG-unversioned" CACHE STRING "Release version number that needs to be incremented for each store submission. For Apple platforms, this is the CFBundleVersion. For Android, this is the Version Code.")
 set(YI_YOUI_ENGINE_VERSION 4.5.0 CACHE STRING "Version required for the You.i Engine.")
